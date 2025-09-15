@@ -182,10 +182,10 @@ def question_game(data):
     for item in data:
         user_ans = input(f"{item['question']} ")
         if user_ans.lower() == item["answer"].lower():
-            print("✅ Correct!\n")
+            print("Correct!\n")
             correct += 1
         else:
-            print("❌ Wrong!\n")
+            print("Wrong!\n")
             wrong += 1
             w_answer.append({
                 "question": item["question"],
@@ -200,9 +200,9 @@ def result(correct, wrong, w_answer):
     if wrong > 0:
         print("\nHere are the questions you got wrong:")
         for item in w_answer:
-            print(f"Q: {item['question']}")
-            print(f"   Your answer: {item['your_answer']}")
-            print(f"   Correct answer: {item['correct_answer']}\n")
+            print(f"question: {item['question']}")
+            print(f"Your answer: {item['your_answer']}")
+            print(f"Correct answer: {item['correct_answer']}\n")
 
 
 def main():
@@ -219,7 +219,7 @@ def main():
             else:
                 print("Great! Let's play again\n")
         else:
-            print("🎉 Well done!")
+            print("Well done!")
             break
 
 
